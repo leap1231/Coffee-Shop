@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="stylehome.css">
+    <link rel="stylesheet" href="styleservice.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo">WCoffee</div>
+            <nav>
+                <ul class="tap">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Service</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <input type="text" placeholder="Search">
+            </div>
+        </header><br>
+        <section class="coffee-section">
+          <div class="content">
+              <h1>When Life Gives You Lemons, <br>Trade Them For Coffee!!</h1>
+              <p>
+                  Shake up your taste buds with a chocolate delight. Chill out with our chocolicious shakes. 
+                  Pure cocoa goodness in every sip.
+              </p>
+              <div id="now"><a href="/invoice.html">Order Now</a></div>
+          </div>
+            <div class="carousel">
+                <div class="image">
+                  <img src="img/ronaldo.jpg" alt="Chocolate Drink">
+                </div>
+      </section><br>
+      <section class="product">
+        <div class="features-container">
+          <div class="feature-box">
+            <h3>Staffs</h3>
+            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+            <a class="read" href="#staff">Read More</a>
+          </div>
+          <div class="feature-box">
+            <h3>Product</h3>
+            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+            <a class="read" href="#pro">Read More</a>
+          </div>
+          <div class="feature-box">
+            <h3>Order</h3>
+            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+            <a class="read" href="/invoice.html">Read More</a>
+          </div>
+          <div class="feature-box">
+            <h3>Contact</h3>
+            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+            <a class="read" href="#contact">Read More</a>
+          </div>
+        </div>
+      </section><br>
+      <section>
+        <div class="about">
+          <h2>Welcome to WCoffee Shop</h2>
+          <p>
+            "Brewing happiness, one cup at a time. Your daily escape, where every sip tells a story. ☕✨"<br>
+            It’s warm, inviting, and captures the essence of a great coffee shop experience!
+          </p>
+          <div class="stats-container">
+            <div class="stat-box">
+              <div class="number">5</div>
+              <div class="description">
+                Years of <span class="highlight">EXPERIENCE</span>
+              </div>
+            </div>
+            <div class="stat-box">
+              <div class="number">4</div>
+              <div class="description">
+                Popular <span class="highlight">MASTER CHEFS</span>
+              </div>
+            </div>
+          </div><br>
+          <div id="btn">
+            <a href="#">Reads More</a>
+          </div>
+        </div>
+      </section>
+      <section class="shop">
+        <div><h2>Product</h2></div>
+         <!-- Sidebar Section -->
+         <aside class="sidebar">
+          <div class="menu-item" onclick="filterProducts('coffee')">☕ Coffee</div>
+          <div class="menu-item" onclick="filterProducts('drinks')">🥤 Drinks</div>
+          <div class="menu-item" onclick="filterProducts('tea')">🍵 Tea</div>
+          <div class="menu-item" onclick="filterProducts('bakery')">🍺 Beer</div>
+      </aside>
+
+      <!-- Product Section -->
+      <section class="products" id="pro">
+          <!-- Coffee Products -->
+          <div class="product-card coffee">
+              <img src="img/black coffe.jpg" alt="Black Coffee">
+              <h3>Black Coffee</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>★</i><i>☆</i>
+              </div>
+              <p>$3.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+          <div class="product-card coffee">
+              <img src="img/hot.jpg" alt="Hot Coffee">
+              <h3>Hot Coffee</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+              </div>
+              <p>$4.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+          <div class="product-card coffee">
+              <img src="img/ice latte.jpg" alt="Ice Latte">
+              <h3>Ice Latte</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>★</i><i>☆</i>
+              </div>
+              <p>$3.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+
+          <!-- Drinks -->
+          <div class="product-card drinks hidden">
+              <img src="img/water.jpg" alt="Water">
+              <h3>Water</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+              </div>
+              <p>$1.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+          <div class="product-card drinks hidden">
+              <img src="img/coca.jpg" alt="Coca Cola">
+              <h3>Coca Cola</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+              </div>
+              <p>$2.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+          <div class="product-card drinks hidden">
+              <img src="img/milk.jpg" alt="Milk">
+              <h3>Milk</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+              </div>
+              <p>$3.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+
+          <!-- Tea Products -->
+          <div class="product-card tea hidden">
+              <img src="img/green.jpg" alt="Green Tea">
+              <h3>Green Tea</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+              </div>
+              <p>$1.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+          <div class="product-card tea hidden">
+              <img src="img/roolbos.jpg" alt="Roolbos Tea">
+              <h3>Roolbos Tea</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+              </div>
+              <p>$1.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+          <div class="product-card tea hidden">
+              <img src="img/black.jpg" alt="Black Tea">
+              <h3>Black Tea</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+              </div>
+              <p>$1.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+
+          <!-- Beer Products -->
+          <div class="product-card bakery hidden">
+              <img src="img/beer1.jpg" alt="Heineken">
+              <h3>Heineken</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+              </div>
+              <p>$.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+          <div class="product-card bakery hidden">
+              <img src="img/beer2.jpg" alt="Kingfisher">
+              <h3>Kingfisher</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+              </div>
+              <p>$5.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+          <div class="product-card bakery hidden">
+              <img src="img/beer3.jpg" alt="Bitter">
+              <h3>Bitter</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+              </div>
+              <p>$5.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+      </section>
+  </div>      
+  <script>
+      // Function to filter products based on category
+      function filterProducts(category) {
+          const allProducts = document.querySelectorAll('.product-card');
+          allProducts.forEach(product => {
+              if (product.classList.contains(category)) {
+                  product.classList.remove('hidden');
+              } else {
+                  product.classList.add('hidden');
+              }
+          });
+      }
+
+      // Function to add product to cart
+      function addToCart(productName, price) {
+          let cart = JSON.parse(localStorage.getItem('cart')) || [];
+          let existingProduct = cart.find(item => item.productName === productName);
+
+          if (existingProduct) {
+              existingProduct.quantity += 1;
+          } else {
+              cart.push({ productName, price, quantity: 1 });
+          }
+
+          localStorage.setItem('cart', JSON.stringify(cart));
+          alert(`${productName} has been added to your cart.`);
+      }
+  </script>
+        </div>
+      </section>
+      <section>
+        <div id="staff"><h2>Staffs </h2></div>
+        <div class="first-card">
+          <div class="card">
+            <div class="card-staff"><img src="img/coffee service.jpg" alt=""></div>
+            <h2>Service</h2>
+            <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+            <h3>Messi</h3>
+          </div>
+          <div class="card">
+            <div class="card-staff"><img src="img/cleaner.jpg" alt=""></div>
+            <h2>cleaner</h2>
+            <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+            <h3>Rose</h3>
+          </div>
+          <div class="card">
+            <div class="card-staff"><img src="img/cashier.jpg" alt=""></div>
+            <h2>cashier</h2>
+            <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+            <h3>Neymar</h3>
+          </div>
+          <div class="card">
+            <div class="card-staff"><img src="img/security.jpg" alt=""></div>
+            <h2>security</h2>
+            <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+            <h3>Pepe & Ramos</h3>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="contact-container">
+          <h1>CONTACT US</h1>
+          <div class="contact-content">
+            <div class="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15077.15550770569!2d72.83375915!3d19.12971985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b64b80a79df1%3A0x579acfa650aa22f4!2sJogeshwari%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1614933604321!5m2!1sen!2sin"
+                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+              </iframe>
+            </div>
+            <div class="form">
+              <h2>GET IN TOUCH</h2>
+              <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="number" placeholder="Number" required>
+                <button type="submit">Contact Now</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+</html>

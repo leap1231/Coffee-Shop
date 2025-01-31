@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo">WCoffee</div>
+            <nav>
+                <ul class="tap">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Service</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <input type="text" placeholder="Search">
+            </div>
+        </header>
+        
+      <section class="prod">
+        <h2>Product</h2>
+        <aside class="sidebar">
+          <div class="menu-item" onclick="filterProducts('coffee')">☕ Coffee</div>
+          <div class="menu-item" onclick="filterProducts('drinks')">🥤 Drinks</div>
+          <div class="menu-item" onclick="filterProducts('tea')">🍵 Tea</div>
+          <div class="menu-item" onclick="filterProducts('bakery')">🍺 Beer</div>
+        </aside>
+
+      <!-- Product Section -->
+      <section class="products" id="pro">
+          <!-- Coffee Products -->
+          <div class="product-card coffee">
+              <img src="img/black coffe.jpg" alt="Black Coffee">
+              <h3>Black Coffee</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>★</i><i>☆</i>
+              </div>
+              <p>$3.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+          <div class="product-card coffee">
+              <img src="img/hot.jpg" alt="Hot Coffee">
+              <h3>Hot Coffee</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+              </div>
+              <p>$4.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+          <div class="product-card coffee">
+              <img src="img/ice latte.jpg" alt="Ice Latte">
+              <h3>Ice Latte</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>★</i><i>☆</i>
+              </div>
+              <p>$3.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+
+          <!-- Drinks -->
+          <div class="product-card drinks hidden">
+              <img src="img/water.jpg" alt="Water">
+              <h3>Water</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+              </div>
+              <p>$1.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+          <div class="product-card drinks hidden">
+              <img src="img/coca.jpg" alt="Coca Cola">
+              <h3>Coca Cola</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+              </div>
+              <p>$2.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+          <div class="product-card drinks hidden">
+              <img src="img/milk.jpg" alt="Milk">
+              <h3>Milk</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+              </div>
+              <p>$3.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+
+          <!-- Tea Products -->
+          <div class="product-card tea hidden">
+              <img src="img/green.jpg" alt="Green Tea">
+              <h3>Green Tea</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+              </div>
+              <p>$1.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+          <div class="product-card tea hidden">
+              <img src="img/roolbos.jpg" alt="Roolbos Tea">
+              <h3>Roolbos Tea</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+              </div>
+              <p>$1.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+          <div class="product-card tea hidden">
+              <img src="img/black.jpg" alt="Black Tea">
+              <h3>Black Tea</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+              </div>
+              <p>$1.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+
+          <!-- Beer Products -->
+          <div class="product-card bakery hidden">
+              <img src="img/beer1.jpg" alt="Heineken">
+              <h3>Heineken</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+              </div>
+              <p>$.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+          <div class="product-card bakery hidden">
+              <img src="img/beer2.jpg" alt="Kingfisher">
+              <h3>Kingfisher</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+              </div>
+              <p>$5.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+          <div class="product-card bakery hidden">
+              <img src="img/beer3.jpg" alt="Bitter">
+              <h3>Bitter</h3>
+              <div class="star-rating">
+                  <i>★</i><i>★</i><i>★</i><i>☆</i><i>☆</i>
+              </div>
+              <p>$5.00</p>
+              <a class="buy-btn" href="invoice.html">Buy</a>
+          </div>
+      </section>
+  </div>      
+  <script>
+      // Function to filter products based on category
+      function filterProducts(category) {
+          const allProducts = document.querySelectorAll('.product-card');
+          allProducts.forEach(product => {
+              if (product.classList.contains(category)) {
+                  product.classList.remove('hidden');
+              } else {
+                  product.classList.add('hidden');
+              }
+          });
+      }
+
+      // Function to add product to cart
+      function addToCart(productName, price) {
+          let cart = JSON.parse(localStorage.getItem('cart')) || [];
+          let existingProduct = cart.find(item => item.productName === productName);
+
+          if (existingProduct) {
+              existingProduct.quantity += 1;
+          } else {
+              cart.push({ productName, price, quantity: 1 });
+          }
+
+          localStorage.setItem('cart', JSON.stringify(cart));
+          alert(`${productName} has been added to your cart.`);
+      }
+  </script>
+        </div>
+    </section>
+      
+</body>
+</html>

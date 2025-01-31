@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleservice.css">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to WCoffee</h1>
+        <div class="form">
+            <form id="coffeeForm">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+    
+                <label for="shopSelect">Select Coffee Shop</label>
+                <select id="shopSelect" onchange="updateCoffeeList()" required>
+                    <option value="" disabled selected>Select Coffee Shop</option>
+                    <option value="coffee">Coffee</option>
+                    <option value="drink">Drink</option>
+                    <option value="tea">Tea</option>
+                    <option value="beer">Beer</option>
+                </select>
+    
+                <label for="coffeeSelect">Select Coffee</label>
+                <select id="coffeeSelect" required>
+                    <option value="" disabled selected>Select Coffee</option>
+                </select>
+    
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" placeholder="Enter quantity" min="1" required>
+    
+                <div class="but">
+                    <button class="total" type="button" onclick="calculatePrice()">Calculate Total</button>
+                    <button class="back"><a href="home.html">Back</a></button>
+                </div>
+            </form>
+        </div>
+
+        <div class="invoice" id="invoiceSection" style="display: none;">
+            <h3>Invoice</h3>
+            <p><span>Your Name:</span> <span id="invoiceName"></span></p>
+            <p><span>Coffee Shop:</span> <span id="invoiceShop"></span></p>
+            <p><span>Coffee:</span> <span id="invoiceCoffee"></span></p>
+            <p><span>Quantity:</span> <span id="invoiceQuantity"></span></p>
+            <p><span>You Need to Pay:</span> $<span id="invoiceTotalPrice"></span></p>
+            <p class="thank-you">========== Thank you for your Order ==========</p>
+        </div>
+    </div>
+
+    <script>
+        // Menu data
+        const Coffee = { "Black Coffee": 2.5, "Hot Coffee": 3.0, "Ice Latte": 3.5 };
+        const Drink = { "Coca Cola": 4.0, "Milk": 4.5, "Water": 5.0 };
+        const Tea = { "Green Tea": 2.0, "Black Tea": 1.8, "Milk Tea": 2.5 };
+        const Beer = { "Heineken": 5, "King Fisher": 5, "Cambodia": 3 };
+
+        // Update coffee list based on shop selection
+        function updateCoffeeList() {
+            const shop = document.getElementById("shopSelect").value;
+            const coffeeSelect = document.getElementById("coffeeSelect");
+            let coffeeMenu = {};
+
+            // Determine the menu based on shop
+            if (shop === "coffee") {
+                coffeeMenu = Coffee;
+            } else if (shop === "drink") {
+                coffeeMenu = Drink;
+            } else if (shop === "tea") {
+                coffeeMenu = Tea;
+            } else if (shop === "beer") {
+                coffeeMenu = Beer;
+            }
+
+            // Populate the coffee dropdown
+            coffeeSelect.innerHTML = "<option value='' disabled selected>Select Coffee</option>";
+            Object.keys(coffeeMenu).forEach(item => {
+                coffeeSelect.innerHTML += `<option value="${item}">${item} - $${coffeeMenu[item]}</option>`;
+            });
+        }
+
+        // Calculate total price and generate invoice
+        function calculatePrice() {
+            const name = document.getElementById("name").value;
+            const shop = document.getElementById("shopSelect").value;
+            const itemType = document.getElementById("coffeeSelect").value;
+            const quantity = document.getElementById("quantity").value;
+
+            if (!name || !shop || !itemType || !quantity) {
+                alert("Please fill in all fields!");
+                return;
+            }
+
+            let coffeeMenu = {};
+            if (shop === "coffee") {
+                coffeeMenu = Coffee;
+            } else if (shop === "drink") {
+                coffeeMenu = Drink;
+            } else if (shop === "tea") {
+                coffeeMenu = Tea;
+            } else if (shop === "beer") {
+                coffeeMenu = Beer;
+            }
+
+            const pricePerItem = coffeeMenu[itemType];
+            const totalPrice = pricePerItem * quantity;
+
+            // Fill the invoice
+            document.getElementById("invoiceName").textContent = name;
+            document.getElementById("invoiceShop").textContent = shop.charAt(0).toUpperCase() + shop.slice(1);
+            document.getElementById("invoiceCoffee").textContent = itemType;
+            document.getElementById("invoiceQuantity").textContent = quantity;
+            document.getElementById("invoiceTotalPrice").textContent = totalPrice.toFixed(2);
+
+            // Show the invoice
+            document.getElementById("invoiceSection").style.display = "block";
+        }
+    </script>
+</body>
+</html>
